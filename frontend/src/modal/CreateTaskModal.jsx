@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { useTaskContext } from '../hooks/contextHook';
 
-const CreateTaskModal = ({ isOpen, setIsModalOpen, selectedTask, mode = 'create',setSelectedTask }) => {
+const CreateTaskModal = ({ isOpen, setIsModalOpen, selectedTask, mode = 'create',setSelectedTask,setMode }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [status, setStatus] = useState('Pending');
-
+setMode
   const { addTask, updateTask } = useTaskContext();
 
   useEffect(() => {
@@ -40,6 +40,7 @@ const CreateTaskModal = ({ isOpen, setIsModalOpen, selectedTask, mode = 'create'
         setTitle('');
         setDescription('');
         setStatus('Pending');
+        setMode('create');
         toast.success(response.data.message || 'Task updated successfully!');
       } else {
         const response = await axios.post(

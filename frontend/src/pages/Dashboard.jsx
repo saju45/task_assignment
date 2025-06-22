@@ -86,6 +86,7 @@ export default function DashboardPage() {
         isOpen={isModalOpen} 
         setIsModalOpen={setIsModalOpen}
         mode={modalMode}
+        setMode={setModalMode}
         selectedTask={selectedTask}
         setSelectedTask={setSelectedTask}        
           />
