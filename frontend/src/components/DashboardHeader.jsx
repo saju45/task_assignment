@@ -3,7 +3,6 @@ export default function DashboardHeader() {
   return (
     <div className="bg-gradient-to-r from-gray-900 to-green-900 text-white p-4 rounded-b-2xl shadow-lg">
       <div className="flex items-center justify-between">
-        {/* Left: Logo + Nav */}
         <div className="flex items-center space-x-8">
           <h1 className="text-2xl font-bold">🌀 Tasko</h1>
           <nav className="hidden md:flex space-x-6 text-green-300 font-semibold">
@@ -12,7 +11,6 @@ export default function DashboardHeader() {
           </nav>
         </div>
 
-        {/* Right: Profile */}
         <div className="flex items-center space-x-2">
           <img
             src="https://via.placeholder.com/32"
@@ -23,7 +21,6 @@ export default function DashboardHeader() {
         </div>
       </div>
 
-      {/* Greeting Section */}
       <div className="mt-6">
         <h2 className="text-lg text-green-300">Hi Thomas</h2>
         <h1 className="text-3xl font-bold mt-1">Welcome to Dashboard</h1>

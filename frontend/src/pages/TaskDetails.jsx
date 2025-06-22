@@ -21,8 +21,6 @@ useEffect(()=>{
         withCredentials: true,
       });
       setTask(response.data.todo);
-
-      console.log("response : ",response);
       
       setStatus(response.data.todo.status);
     } catch (error) {
@@ -47,7 +45,6 @@ useEffect(()=>{
           </div>
         </div>
 
-        {/* Task Info */}
         <div className="flex items-start gap-4">
           <div className="bg-green-100 text-green-600 p-3 rounded-full text-xl">🎨</div>
           <div>
@@ -73,7 +70,6 @@ useEffect(()=>{
           </div>
         </div>
 
-        {/* Status Selector */}
         <div className="mt-6">
           <label className="block text-sm font-medium text-gray-600 mb-1">Change Status</label>
           <select
@@ -87,7 +83,6 @@ useEffect(()=>{
           </select>
         </div>
 
-        {/* Buttons */}
         <div className="flex justify-between flex-col md:flex-row gap-4 mt-8">
           <button className="bg-red-100 text-red-600 px-6 py-2 rounded-lg font-semibold hover:bg-red-200">
             🗑 Delete Task

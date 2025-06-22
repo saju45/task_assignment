@@ -42,7 +42,7 @@ const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center  ">
         
-        <div className="hidden md:flex w-1/2 h-screen bg-gradient-to-br from-[#0f172a] to-[#1e293b] items-center justify-center p-10">
+        <div className="hidden md:flex w-1/2 h-screen bg-gradient-to-br from-gray-900 to-green-900 items-center justify-center p-10">
           <img
             src={loginImage}
             alt="Illustration"

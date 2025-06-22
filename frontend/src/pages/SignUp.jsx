@@ -58,13 +58,15 @@ const Signup = () => {
  
       <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-xl  w-full h-screen overflow-hidden">
 
-        <div className="hidden md:block w-full md:w-1/2 h-full bg-black flex justify-center items-center py-8">
-          <img
-            src="https://i.ibb.co/fYfV9xf/signup.png" // তুমি চাইলে নিজের ইমেজ লিংক দাও
-            alt="Signup Illustration"
-            className="w-3/4"
-          />
-        </div>
+
+        <div className="hidden md:flex w-full md:w-1/2 h-full bg-gradient-to-br from-gray-900 to-green-900 justify-center items-center py-8">
+  <img
+    src="https://media.istockphoto.com/id/1178681968/photo/white-and-brown-wooden-welcome-sign.webp?a=1&s=612x612&w=0&k=20&c=KYwIwpJ0PBMjHlESyCfnrCZ7WxzdAjMuMSTha_yf7L4=" 
+    alt="Signup Illustration"
+    className="w-2/4"
+  />
+</div>
+
 
         <div className="w-full md:w-1/2 p-8 md:p-12">
           <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">Sign Up</h2>

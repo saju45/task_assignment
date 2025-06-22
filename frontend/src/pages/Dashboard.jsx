@@ -28,7 +28,6 @@ export default function DashboardPage() {
               withCredentials: true,
             });
              setTasks(response.data.tasks);
-            console.log("Fetched tasks:", response.data.tasks);
           } catch (error) {
             console.error("Error fetching tasks:", error);
           }
@@ -39,7 +38,7 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-gray-50 px-4 py-6 md:px-10">
 
-      <div className="bg-gradient-to-r from-gray-900 to-green-900 text-white p-4 rounded-2xl shadow-md">
+      <div className="bg-gradient-to-r from-gray-900 to-green-900 text-white pt-4 pb-8 px-4 rounded-2xl shadow-md">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-8">
             <h1 className="text-2xl font-bold">🌀 Tasko</h1>
@@ -57,9 +56,12 @@ export default function DashboardPage() {
           <h2 className="text-lg text-green-300">Hi Thomas</h2>
           <h1 className="text-3xl font-bold mt-1">Welcome to Dashboard</h1>
         </div>
+      
       </div>
 
-      <div className="bg-white mt-6 p-4 rounded-xl shadow flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="bg-white mt-[-60px] p-4 rounded-xl shadow  h-screen">
+
+    <div className="bg-white mt-6 p-4  flex flex-col md:flex-row justify-between items-center gap-4">
         <h2 className="text-lg font-semibold">All Task List</h2>
         <div className="flex flex-wrap gap-4">
           <select className="border rounded-lg p-2 text-sm">
@@ -79,6 +81,7 @@ export default function DashboardPage() {
           <TaskCard key={index} task={task} onHandleEdit={handleEdit} />
         ))}
       </div>
+
        <CreateTaskModal
         isOpen={isModalOpen} 
         setIsModalOpen={setIsModalOpen}
@@ -86,6 +89,8 @@ export default function DashboardPage() {
         selectedTask={selectedTask}
         setSelectedTask={setSelectedTask}        
           />
+      </div>
+   
     </div>
   );
 }
